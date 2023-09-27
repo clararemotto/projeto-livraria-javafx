@@ -21,6 +21,7 @@ public class App extends Application {
         scene = new Scene(loadFXML("primary"), 640, 480);
         stage.setScene(scene);
         stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
+        stage.setTitle("Livraria");
         stage.show();
     }
 
