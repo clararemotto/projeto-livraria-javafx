@@ -40,7 +40,7 @@ public class Autor {
         return nome;
     }
 
-    public Object autor(String newValue) {
+    public Autor autor(String newValue) {
         return null;
     }
 

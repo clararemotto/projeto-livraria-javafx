@@ -36,7 +36,7 @@ public class AutorDao {
         while(resultado.next()){
             lista.add (
                 new Autor(
-                    resultado.getLong("id"), 
+                    resultado.getLong("autor_id"), 
                     resultado.getString("nome"), 
                     resultado.getString("email")
                  )
@@ -47,7 +47,7 @@ public class AutorDao {
     }
 
     public void apagar(Autor autor) throws SQLException{
-        var comando = conexao.prepareStatement("DELETE FROM autores WHERE autor_id=?");
+        var comando = conexao.prepareStatement("DELETE FROM TBL_AUTOR WHERE autor_id=?");
         comando.setLong(1, autor.getId());
         comando.executeUpdate();
     }

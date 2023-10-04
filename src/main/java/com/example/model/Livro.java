@@ -41,4 +41,8 @@ public class Livro {
         this.autor = autor;
     }
 
+    public Livro autor(String newValue) {
+        return null;
+    }
+
 }

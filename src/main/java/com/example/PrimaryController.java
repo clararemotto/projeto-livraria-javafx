@@ -1,6 +1,5 @@
 package com.example;
 
-import java.math.BigDecimal;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -164,21 +163,21 @@ public class PrimaryController implements Initializable {
         });
 
         colAutor.setCellValueFactory(new PropertyValueFactory<>("autor"));
-        colAutor.setCellFactory(TextFieldTableCell.forTableColumn());
         colAutor.setOnEditCommit(event -> {
-            atualizarLivro(event.getRowValue().livro(event.getNewValue()));
+            atualizarLivro(event.getRowValue().autor(event.getNewValue()));
         });
 
         colNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
         colNome.setCellFactory(TextFieldTableCell.forTableColumn());
-        // colAutor.setOnEditCommit(event -> {
-        //     atualizarAutor(event.getRowValue().autor(event.getNewValue()));
-        // });
-
+        colNome.setOnEditCommit(event -> {
+            atualizarAutor(event.getRowValue().autor(event.getNewValue()));
+        });
+        
         colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
         colEmail.setCellFactory(TextFieldTableCell.forTableColumn());
-
-        colAutor.setCellValueFactory(new PropertyValueFactory<>("autor"));
+        colEmail.setOnEditCommit(event -> {
+            atualizarAutor(event.getRowValue().autor(event.getNewValue()));
+        });
 
         tabelaLivro.setEditable(true);
         tabelaAutor.setEditable(true);
