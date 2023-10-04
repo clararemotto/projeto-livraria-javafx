@@ -1,12 +1,12 @@
 package com.example.model;
 
-public class Livraria {
+public class Livro {
 
     private Long id;
     private String livro;
-    private String autor;
+    private Autor autor;
     
-    public Livraria(Long id, String livro, String autor) {
+    public Livro(Long id, String livro, Autor autor) {
         this.id = id;
         this.livro = livro;
         this.autor = autor;
@@ -28,22 +28,17 @@ public class Livraria {
         this.livro = livro;
     }
 
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public Livraria livro(String livro) {
+    public Livro livro(String livro) {
         this.livro = livro;
         return this;
     }
 
-    public Livraria autor(String autor) {
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
         this.autor = autor;
-        return this;
     }
 
 }
